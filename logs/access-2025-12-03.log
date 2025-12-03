@@ -1,0 +1,15 @@
+::1 POST /email/send 500 61 - 1429.884 ms
+::1 POST /email/send 500 135 - 4943.536 ms
+::1 POST /auth/login - - - - ms
+::1 POST /auth/login - - - - ms
+::1 POST /auth/login - - - - ms
+::1 POST /auth/login - - - - ms
+::1 POST /auth/login - - - - ms
+::1 POST /auth/login - - - - ms
+::1 GET /products? - - - - ms
+::1 GET /products? - - - - ms
+::1 GET /products? - - - - ms
+::1 GET /products? 500 89 - 10015.895 ms
+::1 GET /products? - - - - ms
+::1 GET /products? - - - - ms
+::1 GET /products? - - - - ms
