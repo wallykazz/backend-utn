@@ -25,7 +25,6 @@ class ProductController {
         // minPrice -> si tengo un precio mínimo quiero un objeto con un precio mas grande.
         if (maxPrice) filter.price.$lte = maxPrice
       }
-
       const products = await Product.find(filter)
       res.json({ success: true, data: products })
     } catch (e) {

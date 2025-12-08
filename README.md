@@ -1,0 +1,124 @@
+# Backend UTN - API REST en TypeScript
+
+Backend desarrollado en **TypeScript** con **Node.js**, **Express** y **MongoDB**, que permite gestionar productos y usuarios con autenticación JWT, subida de imágenes y envío de correos.  
+
+El proyecto está desplegado en **Render.com** y listo para consumo desde un frontend.
+
+---
+
+## 🔹 Tecnologías utilizadas:
+
+- Node.js + Express
+- TypeScript
+- MongoDB + Mongoose
+- JWT (autenticación)
+- Bcryptjs (hash de contraseñas)
+- Zod (validación de datos)
+- Multer (subida de imágenes)
+- Nodemailer (envío de correos)
+- Morgan (logs)
+- Express-rate-limit
+- Render.com (deploy)
+
+## 🔹 Instalar dependencias:
+npm install
+
+## Crear archivo .env basado en .env.example:
+PORT=5000
+JWT_SECRET=tu_clave_secreta
+URI_DB=mongodb+srv://usuario:pass@cluster.mongodb.net/dbname
+EMAIL_USER=correo@gmail.com
+EMAIL_PASS=contraseña_app
+
+## Ejecutar en desarrollo (con TypeScript y recarga automática):
+npm run dev
+
+## Compilar a JavaScript (para producción):
+npm run build
+
+## Ejecutar en producción (con JavaScript compilado):
+npm start
+
+## 🔹Scripts disponibles
+"scripts": {
+  "dev": "ts-node-dev ./src/index.ts",   // Desarrollo
+  "build": "tsc",                        // Compilación TS → JS
+  "start": "node dist/index.js"          // Producción
+}
+
+## 🔹 Endpoints:
+
+| Método | Ruta             | Descripción         | Body                                                     |
+| ------ | ---------------- | ------------------- | -------------------------------------------------------- |
+| POST   | `/auth/register` | Registrar usuario   | `{ "email": "waldoejemplo@gmail.com", "password": "123" }` |
+| POST   | `/auth/login`    | Login y recibir JWT | `{ "email": "waldoejemplo@gmail.com", "password": "123" }` |
+
+
+ ## 🔹 Productos
+
+ | Método | Ruta            | Descripción                     | Body / Query Params                                               |
+ | ------ | --------------- | ------------------------------- | ----------------------------------------------------------------- |
+ | GET    | `/products`     | Listar todos los productos      | Query: `name`, `category`, `minPrice`, `maxPrice`, `stock`        |
+ | GET    | `/products/:id` | Obtener producto por ID         | -                                                                 |
+ | POST   | `/products`     | Crear producto (token JWT)      | `{ name, description, category, price, stock }` + imagen opcional |
+ | PATCH  | `/products/:id` | Actualizar producto (token JWT) | `{ name?, description?, category?, price?, stock? }`              |
+ | DELETE | `/products/:id` | Eliminar producto (token JWT)   | -                                                                 |
+ 
+ ## 🔹 Envío de correo
+
+ | Método | Ruta          | Descripción            | Body                                                                            |
+| ------ | ------------- | ---------------------- | ------------------------------------------------------------------------------- |
+| POST   | `/email/send` | Enviar correo al admin | `{ "subject": "Asunto", "email": "waldoejemplo@gmail.com", "message": "Contenido" }` |
+
+
+ ## 🔹 Estructura del proyecto
+src/
+ ├─ config/
+ │   ├─ emailConfig.ts
+ │   └─ logger.ts
+ │   └─ mongodb.ts
+ ├─ controllers/
+ │   ├─ authController.ts
+ │   └─ productController.ts
+ ├─ interfaces/
+ │   ├─ IProduct.ts
+ │   ├─ IUser.ts
+ │   └─ IUserTokenPayload.ts
+ ├─ middleware/
+ │   ├─ authMiddleware.ts
+ │   ├─ rateLimitMiddleware.ts
+ │   └─ uploadMiddleware.ts
+ ├─ model/
+ │   ├─ ProductModel.ts
+ │   └─ UserModel.ts
+ ├─ routes/
+ │   ├─ authRouter.ts
+ │   └─ productRoutes.ts
+ ├─ services/
+ │   └─ emailService.ts
+ ├─ templates/
+ │   └─ emailTemplate.ts
+ ├─ validators/
+ │   └─ productValidators.ts
+ └─ index.ts
+
+## 🔹 Variables de entorno
+
+PORT → Puerto del servidor
+
+JWT_SECRET → Clave secreta para JWT
+
+URI_DB → URI de conexión a MongoDB
+
+EMAIL_USER → Correo para enviar emails
+
+EMAIL_PASS → Contraseña de aplicación de correo
+
+## 🔹 Notas importantes
+
+Rutas de productos requieren token JWT para POST, PATCH y DELETE.
+
+Se guarda log diario de todas las solicitudes en /logs.
+
+Las imágenes de productos se suben a /uploads.
+ 

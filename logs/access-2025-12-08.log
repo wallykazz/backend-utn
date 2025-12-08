@@ -56,3 +56,11 @@
 ::1 POST /products 400 45 - 14.974 ms
 ::1 POST /products 400 45 - 4.922 ms
 ::1 POST /products 400 45 - 14.976 ms
+::1 POST /products 400 45 - 14.287 ms
+::1 POST /products 400 45 - 7.003 ms
+::1 POST /products 401 38 - 1.508 ms
+::1 POST /auth/login 200 239 - 833.347 ms
+::1 POST /products 400 45 - 5.582 ms
+::1 POST /products 400 45 - 5.407 ms
+::1 POST /products 400 45 - 15.806 ms
+::1 POST /products 400 45 - 16.166 ms
