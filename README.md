@@ -4,6 +4,11 @@ Backend desarrollado en **TypeScript** con **Node.js**, **Express** y **MongoDB*
 
 El proyecto está desplegado en **Render.com** y listo para consumo desde un frontend.
 
+API funcionando online en:  
+   **https://backend-utn-msqw.onrender.com/**
+ y con los productos en:   
+   **https://backend-utn-msqw.onrender.com/products**
+
 ---
 
 ## 🔹 Tecnologías utilizadas:
@@ -47,6 +52,8 @@ npm start
 }
 
 ## 🔹 Endpoints:
+
+## AUTH (Usuarios)
 
 | Método | Ruta             | Descripción         | Body                                                     |
 | ------ | ---------------- | ------------------- | -------------------------------------------------------- |

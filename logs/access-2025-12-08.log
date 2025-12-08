@@ -64,3 +64,10 @@
 ::1 POST /products 400 45 - 5.407 ms
 ::1 POST /products 400 45 - 15.806 ms
 ::1 POST /products 400 45 - 16.166 ms
+::1 POST /product 404 54 - 1.976 ms
+::1 POST /products 400 45 - 14.294 ms
+::1 POST /products/ 400 45 - 7.558 ms
+::1 GET /api/auth 404 54 - 0.333 ms
+::1 GET /auth 404 54 - 0.411 ms
+::1 GET /auth 404 54 - 0.329 ms
+::1 GET /products 304 - - 642.286 ms
