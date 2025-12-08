@@ -13,3 +13,12 @@
 ::1 GET /products? - - - - ms
 ::1 GET /products? - - - - ms
 ::1 GET /products? - - - - ms
+::1 GET /products? 200 1121 - 95.655 ms
+::1 GET /products? 304 - - 88.685 ms
+::1 POST /email/send 200 551 - 3380.148 ms
+::1 POST /email/send 200 550 - 2988.666 ms
+::1 POST /email/send 200 551 - 2670.438 ms
+::1 POST /email/send 200 546 - 2729.655 ms
+::1 POST /email/send 200 546 - 2544.130 ms
+::1 GET /products? 304 - - 168.553 ms
+::1 GET /products? 304 - - 55.272 ms
