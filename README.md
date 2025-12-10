@@ -25,15 +25,54 @@ API funcionando online en:
 - Express-rate-limit
 - Render.com (deploy)
 
-## 🔹 Instalar dependencias:
-npm install
 
-## Crear archivo .env basado en .env.example:
-PORT=5000
-JWT_SECRET=tu_clave_secreta
-URI_DB=mongodb+srv://usuario:pass@cluster.mongodb.net/dbname
-EMAIL_USER=correo@gmail.com
-EMAIL_PASS=contraseña_app
+## 🔹 Instalación y ejecución local
+
+## 1. Clonar el repositorio
+git clone https://github.com/usuario/backend-utn.git
+cd backend-utn
+
+## 🔹 Instalar dependencias:
+
+## 1. Instalar dependencias principales
+
+npm install express mongoose jsonwebtoken bcryptjs zod multer nodemailer morgan express-rate-limit dotenv cors
+
+Esto instala:
+
+🔹Express
+
+🔹Mongoose
+
+🔹JWT
+
+🔹Bcrypt
+
+🔹Zod
+
+🔹Multer
+
+🔹Nodemailer
+
+🔹Morgan
+
+🔹Rate limit
+
+🔹Dotenv
+
+🔹Cors
+
+## 2. Instalar dependencias de desarrollo (TypeScript + herramientas TS)
+
+npm install -D typescript ts-node-dev @types/node @types/express @types/bcryptjs @types/jsonwebtoken @types/morgan @types/multer @types/cors
+
+Esto instala:
+
+typescript → lenguaje
+
+ts-node-dev → ejecutar TS con recarga automática
+
+Tipos: Node, Express, Cors, Multer, JWT, Morgan, Bcrypt…
 
 ## Ejecutar en desarrollo (con TypeScript y recarga automática):
 npm run dev
@@ -43,6 +82,14 @@ npm run build
 
 ## Ejecutar en producción (con JavaScript compilado):
 npm start
+
+## Crear archivo .env basado en .env.example:
+PORT=5000
+JWT_SECRET=tu_clave_secreta
+URI_DB=mongodb+srv://usuario:pass@cluster.mongodb.net/dbname
+EMAIL_USER=correo@gmail.com
+EMAIL_PASS=contraseña_app
+
 
 ## 🔹Scripts disponibles
 
