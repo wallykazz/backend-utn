@@ -45,11 +45,48 @@ npm run build
 npm start
 
 ## 🔹Scripts disponibles
+
 "scripts": {
   "dev": "ts-node-dev ./src/index.ts",   // Desarrollo
   "build": "tsc",                        // Compilación TS → JS
   "start": "node dist/index.js"          // Producción
 }
+
+## 🔹Instrucciones de uso
+
+## 1. Registro e inicio de sesión
+Para obtener el token JWT, primero registrarse:
+POST /auth/register
+
+## Luego iniciar sesión:
+POST /auth/login
+(El login devuelve un token JWT.)
+
+## 2. Usar Token en rutas protegidas
+
+Para crear, actualizar o eliminar productos:
+
+Header:
+Authorization: Bearer <token>
+
+## 3. Subida de imágenes
+
+Al crear o editar productos:
+
+Enviar multipart/form-data
+
+Campo de archivo: image
+
+## 4. Filtros de productos
+
+Puede filtrarse por:
+
+/products?name=mouse
+/products?category=tecnologia
+/products?minPrice=100
+/products?maxPrice=500
+/products?stock=10
+
 
 ## 🔹 Endpoints:
 
