@@ -11,6 +11,7 @@ import logger from "./config/logger"
 import path from "node:path"
 import fs from "node:fs"
 import emailService from "./services/emailService"
+import limiter from "./middleware/rateLimitMiddleware"
 
 dotenv.config()
 
@@ -43,7 +44,7 @@ app.get("/", (__: Request, res: Response) => {
   res.json({ status: true })
 })
 
-app.use("/auth", authRouter)
+app.use("/auth", limiter, authRouter)
 // http://localhost:3000/products?
 app.use("/products", productRouter)
 
