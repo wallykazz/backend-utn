@@ -11,6 +11,36 @@ API funcionando online en:
 
 ---
 
+# 📸 Capturas de Bruno y funcionamiento de los Endpoints:
+
+## 📸 Obtener todos los productos
+![Productos](./src/assets/getallproducts.png)
+
+## 📸 Obtener producto por ID
+![Producto por ID](./src/assets/getproductid.png)
+
+## 📸 Registro de usuario
+![Registro](./src/assets/registeruser.png)
+
+## 📸 Registro "Usuario ya registrado"
+!["Usuario ya registrado"](./src/assets/registerusuarioregistrado.png)
+
+## 📸 Login de usuario
+![Login](./src/assets/loginusers.png)
+
+## 📸 Añadir producto
+![Añadir Producto](./src/assets/addproduct.png) 
+
+## 📸 Actualizar producto
+![Actualizar producto](./src/assets/updateproduct.png)
+
+## 📸 Borrar productos
+![Borrar Productos](./src/assets/deleteproduct.png)
+
+## 📸 Rate Limiter
+![Rate Limiter](./src/assets/ratelimiter.png)
+
+
 ## 🔹 Tecnologías utilizadas:
 
 - Node.js + Express
@@ -26,7 +56,7 @@ API funcionando online en:
 - Render.com (deploy)
 
 
-## 🔹 Instalación y ejecución local
+# 🔹 Instalación y ejecución local
 
 ## 1. Clonar el repositorio
 git clone https://github.com/usuario/backend-utn.git
