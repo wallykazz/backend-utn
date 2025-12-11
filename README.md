@@ -8,6 +8,12 @@ API funcionando online en:
    **https://backend-utn-msqw.onrender.com/**
  y con los productos en:   
    **https://backend-utn-msqw.onrender.com/products**
+   
+---
+
+## Video explicativo de la API:
+
+# Link: https://www.youtube.com/watch?v=Dj3YULS1FYM
 
 ---
 
@@ -191,37 +197,6 @@ Puede filtrarse por:
 | ------ | ------------- | ---------------------- | ------------------------------------------------------------------------------- |
 | POST   | `/email/send` | Enviar correo al admin | `{ "subject": "Asunto", "email": "waldoejemplo@gmail.com", "message": "Contenido" }` |
 
-
- ## 🔹 Estructura del proyecto
-src/
- ├─ config/
- │   ├─ emailConfig.ts
- │   └─ logger.ts
- │   └─ mongodb.ts
- ├─ controllers/
- │   ├─ authController.ts
- │   └─ productController.ts
- ├─ interfaces/
- │   ├─ IProduct.ts
- │   ├─ IUser.ts
- │   └─ IUserTokenPayload.ts
- ├─ middleware/
- │   ├─ authMiddleware.ts
- │   ├─ rateLimitMiddleware.ts
- │   └─ uploadMiddleware.ts
- ├─ model/
- │   ├─ ProductModel.ts
- │   └─ UserModel.ts
- ├─ routes/
- │   ├─ authRouter.ts
- │   └─ productRoutes.ts
- ├─ services/
- │   └─ emailService.ts
- ├─ templates/
- │   └─ emailTemplate.ts
- ├─ validators/
- │   └─ productValidators.ts
- └─ index.ts
 
 ## 🔹 Variables de entorno
 
